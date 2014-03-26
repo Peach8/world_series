@@ -26,7 +26,7 @@ void setup() {
   smallFont = loadFont("AmericanTypewriter-Bold-20.vlw");
   medFont = loadFont("AmericanTypewriter-Bold-36.vlw");
   largeFont = loadFont("AmericanTypewriter-Bold-150.vlw");
-  loseColor = color(231, 76, 60, 175);
+  loseColor = color(250, 114, 114, 220);
   //loseColor = color(255, 89, 82, 175);
   winColor = color(52, 152, 219, 175);
   //winColor = color(79, 170, 201, 175);
