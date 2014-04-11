@@ -37,9 +37,9 @@ class Year {
     } 
     else {
       detectMouse();
+      showWinnerLoser();
       drawYear();
       drawBigYear();
-      showWinnerLoser();
       showGameRecord();
       showMVP();
     }
@@ -57,23 +57,20 @@ class Year {
   void drawYear() {
     textAlign(CENTER);
     if (hovering) {
-      textFont(smallFont);
-      textSize(16);
-      fill(textColor);
+      textFont(font16);
+      fill(otherTextColor);
       text(yearName, centerX, centerY);
     }
     else {
-      textFont(tinyFont);
-      textSize(14);
-      fill(textColor);
+      textFont(font14);
+      fill(yearTextColor);
       text(yearName, centerX, centerY);
     }
   }
 
   void drawWinYear() {
     textAlign(CENTER);
-    textFont(smallFont);
-    textSize(16);
+    textFont(font16);
     fill(winColor);
     text(this.yearName, this.centerX, this.centerY);
     this.drawWin = false;
@@ -81,8 +78,7 @@ class Year {
 
   void drawLoseYear() {
     textAlign(CENTER);
-    textFont(smallFont);
-    textSize(16);
+    textFont(font16);
     fill(loseColor);
     text(this.yearName, this.centerX, this.centerY);
     this.drawLose = false;
@@ -91,8 +87,10 @@ class Year {
   void drawBigYear() {
     if (hovering) {
       textAlign(LEFT);
-      textFont(largeFont);
-      fill(textColor);
+      textFont(font150);
+      fill(0);
+      text(yearName, 9, height-83);
+      fill(otherTextColor);
       text(yearName, 10, height-85);
     }
   }
@@ -120,20 +118,24 @@ class Year {
   }
 
   void showGameRecord() {
-    if (hovering) {
+    if (hovering && !this.gameRecord.equals("-1")) {
       textAlign(LEFT);
-      textFont(medFont);
-      fill(textColor);
-      text("Game Record: " + this.gameRecord, 10, 110);
+      textFont(font36);
+      fill(0);
+      text("Game Record: " + this.gameRecord, 9, 112);
+      fill(otherTextColor);
+      text("Game Record: " + this.gameRecord, 10, 111);
     }
   }
 
   void showMVP() {
     if (hovering && this.mvp != "") {
       textAlign(RIGHT);
-      textFont(medFont);
-      fill(textColor);
-      text("MVP: " + this.mvp, width-10, height-90);
+      textFont(font36);
+      fill(0);
+      text("MVP: " + this.mvp, width-12, height-88);
+      fill(otherTextColor);
+      text("MVP: " + this.mvp, width-11, height-89);
     }
   }
 }

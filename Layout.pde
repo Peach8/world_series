@@ -10,7 +10,7 @@ class Layout {
     image(p1, width/2, height/2); 
 
     noStroke();
-    fill(75, 210);
+    fill(65, 215);
     rect(35, 305, width-35, 475);
     line(0, 77, width, 77);
     line(0, height-77, width, height-77);

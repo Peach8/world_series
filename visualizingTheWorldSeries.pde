@@ -5,11 +5,14 @@
 
 color loseColor;
 color winColor;
-color textColor;
-PFont tinyFont;
-PFont smallFont;
-PFont medFont;
-PFont largeFont;
+color yearTextColor;
+color otherTextColor;
+PFont font14;
+PFont font16;
+PFont font20;
+PFont font24;
+PFont font36;
+PFont font150;
 
 Layout myLayout;
 Teams teams;
@@ -22,16 +25,17 @@ void setup() {
   rectMode(CENTER);
   imageMode(CENTER);
   textAlign(CENTER);
-  tinyFont = loadFont("AmericanTypewriter-Bold-16.vlw");
-  smallFont = loadFont("AmericanTypewriter-Bold-20.vlw");
-  medFont = loadFont("AmericanTypewriter-Bold-36.vlw");
-  largeFont = loadFont("AmericanTypewriter-Bold-150.vlw");
+  font14 = loadFont("AmericanTypewriter-Bold-14.vlw");
+  font16 = loadFont("AmericanTypewriter-Bold-16.vlw");
+  font20 = loadFont("AmericanTypewriter-Bold-20.vlw");
+  font24 = loadFont("AmericanTypewriter-Bold-24.vlw");
+  font36 = loadFont("AmericanTypewriter-Bold-36.vlw");
+  font150 = loadFont("AmericanTypewriter-Bold-150.vlw");
   loseColor = color(250, 114, 114, 220);
-  //loseColor = color(255, 89, 82, 175);
-  winColor = color(52, 152, 219, 175);
-  //winColor = color(79, 170, 201, 175);
-  //textColor = color(236, 240, 241);
-  textColor = color(252, 238, 201, 210);
+  winColor = color(92, 183, 255, 175);
+  yearTextColor = color(255, 200);
+  otherTextColor = color(241, 235, 143);
+  
   
   myLayout = new Layout();
   teams = new Teams();

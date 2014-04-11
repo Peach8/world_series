@@ -73,13 +73,23 @@ class Team {
   void drawTeamNames() {
     if (hovering) {
       textAlign(RIGHT);
-      fill(textColor);
-      textFont(medFont);
+      textFont(font36);
+      fill(0);
+      text(teamName, width-9, 111);
+      fill(otherTextColor);
       text(teamName, width-10, 110);
-      textFont(smallFont);
+      
+      textFont(font24);
+      fill(0);
+      text(altName1, width-9, 136);
+      fill(otherTextColor);
       text(altName1, width-10, 135);
-      textFont(tinyFont);
-      text(altName2, width-10, 160);
+      
+      textFont(font20);
+      fill(0);
+      text(altName2, width-10, 161);
+      fill(otherTextColor);
+      text(altName2, width-9, 160);
     }
   }
 
