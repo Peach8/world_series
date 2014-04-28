@@ -3,6 +3,7 @@ class Team {
   String teamName;
   String altName1, altName2;
   String[] winningYears, losingYears;
+  String firstTeamActiveYears, secondTeamActiveYears, currentTeamActiveYears;
   String imageName;
   float centerX;
   float centerY;
@@ -18,7 +19,8 @@ class Team {
   boolean hovering;
 
   Team(int id, String teamName, String altName1, String altName2, 
-  String[] winningYears, String[] losingYears, String imageName, 
+  String[] winningYears, String[] losingYears, String firstTeamActiveYears, 
+  String secondTeamActiveYears, String currentTeamActiveYears, String imageName, 
   float centerX, float centerY, float leftCornerX, float leftCornerY, 
   float rightCornerX, float rightCornerY) {
     this.id = id;
@@ -27,6 +29,9 @@ class Team {
     this.altName2 = altName2;
     this.winningYears = winningYears;
     this.losingYears = losingYears;
+    this.firstTeamActiveYears = firstTeamActiveYears;
+    this.secondTeamActiveYears = secondTeamActiveYears;
+    this.currentTeamActiveYears = currentTeamActiveYears;
     this.imageName = imageName;
     this.bwImage = loadImage(imageName+"LogoBW.jpg");
     this.colorImage = loadImage(imageName+"LogoC.jpg");
@@ -75,21 +80,21 @@ class Team {
       textAlign(RIGHT);
       textFont(font36);
       fill(0);
-      text(teamName, width-9, 111);
+      text(teamName + " " + currentTeamActiveYears, width-9, 111);
       fill(otherTextColor);
-      text(teamName, width-10, 110);
+      text(teamName + " " + currentTeamActiveYears, width-10, 110);
       
       textFont(font24);
       fill(0);
-      text(altName1, width-9, 136);
+      text(altName1 + " " + secondTeamActiveYears, width-9, 138);
       fill(otherTextColor);
-      text(altName1, width-10, 135);
+      text(altName1 + " " + secondTeamActiveYears, width-10, 137);
       
-      textFont(font20);
+      textFont(font24);
       fill(0);
-      text(altName2, width-10, 161);
+      text(altName2 + " " + firstTeamActiveYears, width-10, 163);
       fill(otherTextColor);
-      text(altName2, width-9, 160);
+      text(altName2 + " " + firstTeamActiveYears, width-9, 162);
     }
   }
 

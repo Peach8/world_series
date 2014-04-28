@@ -19,15 +19,18 @@ class Teams {
       String altName2 = row.getString("altName2");
       String[] winningYears = split(row.getString("winningYears"), ' '); 
       String[] losingYears = split(row.getString("losingYears"), ' ');
+      String firstTeamActiveYears = row.getString("firstTeamActiveYears");
+      String secondTeamActiveYears = row.getString("secondTeamActiveYears");
+      String currentTeamActiveYears = row.getString("currentTeamActiveYears");
       String imageName = row.getString("imageName");
 
       // create a team from that data
 
       if (i < 15) { //national league
-        allTeams[i] = new Team(id, teamName, altName1, altName2, winningYears, losingYears, imageName, halfBinWidth + binWidth * i, binWidth/2, binWidth*i, binWidth, binWidth + binWidth*i, binWidth);
+        allTeams[i] = new Team(id, teamName, altName1, altName2, winningYears, losingYears, firstTeamActiveYears, secondTeamActiveYears, currentTeamActiveYears, imageName, halfBinWidth + binWidth * i, binWidth/2, binWidth*i, binWidth, binWidth + binWidth*i, binWidth);
       } 
       else {
-        allTeams[i] = new Team(id, teamName, altName1, altName2, winningYears, losingYears, imageName, halfBinWidth + binWidth * (i-15), height-binWidth/2, binWidth * (i-15), height-binWidth, binWidth + binWidth * (i-15), height-binWidth);
+        allTeams[i] = new Team(id, teamName, altName1, altName2, winningYears, losingYears, firstTeamActiveYears, secondTeamActiveYears, currentTeamActiveYears, imageName, halfBinWidth + binWidth * (i-15), height-binWidth/2, binWidth * (i-15), height-binWidth, binWidth + binWidth * (i-15), height-binWidth);
       }
     }
   }
