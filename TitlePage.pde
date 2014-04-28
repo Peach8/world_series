@@ -16,12 +16,13 @@ class TitlePage {
   void pageLayout() {
     rectMode(CENTER);
     textAlign(CENTER);
-    background(92, 183, 255); 
-    noFill();
+    background(92, 183, 255);
+    fill(250, 114, 114);
+    strokeWeight(3);
+    rect(width/2, height/2, width-60, height-60); 
+    fill(92, 183, 255);
     strokeWeight(8);
     rect(width/2, height/2, width-80, height-80);
-    strokeWeight(3);
-    rect(width/2, height/2, width-60, height-60);
     fill(255);
     textFont(titleFont);
     text("Visualizing", width/2, 200);
@@ -32,7 +33,7 @@ class TitlePage {
     text("the", width/2 + 3, 300 + 3);
     text("World Series", width/2 + 3, 400 + 3);
 
-    fill(255);
+    fill(250, 114, 114);
     strokeWeight(1);
     rect(width/2, 505, 510, 60);
     fill(92, 183, 255);
