@@ -2,16 +2,16 @@ class Layout {
   PImage p1;
 
   Layout() {
-    rectMode(CORNERS);
     p1 = loadImage("theBabe.jpeg");
   }
 
   void display() {
+    rectMode(CORNERS);
     image(p1, width/2, height/2); 
 
     noStroke();
     fill(65, 215);
-    rect(35, 305, width-35, 475);
+    rect(35, 305, width-35, 475, 7);
     line(0, 77, width, 77);
     line(0, height-77, width, height-77);
     noFill();
