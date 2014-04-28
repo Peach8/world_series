@@ -18,8 +18,8 @@ class VisualizationManager {
 
   void displayVisualization() {
     myLayout.display();
-    teams.display();
     years.display();
+    teams.display();
   }
 }
 

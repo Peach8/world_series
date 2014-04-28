@@ -27,6 +27,7 @@ VisualizationManager myManager;
 
 void setup() {
   size(1171, 800, OPENGL);
+  //smooth();
   rectMode(CENTER);
   imageMode(CENTER);
   textAlign(CENTER);
@@ -57,7 +58,7 @@ void setup() {
    font150 = loadFont("AmericanTypewriter-Bold-150.vlw"); 
    */
 
-  loseColor = color(250, 114, 114, 220);
+  loseColor = color(250, 114, 114, 175);
   winColor = color(92, 183, 255, 175);
   yearTextColor = color(255, 200);
   otherTextColor = color(241, 235, 143);
